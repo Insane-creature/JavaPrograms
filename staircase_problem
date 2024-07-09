@@ -1,0 +1,14 @@
+public class staircase {
+    public static int countWays(int n) {
+        if (n == 0 || n == 1) return 1;
+        if (n == 2) return 2;
+        if (n == 3) return 4;
+        
+        return countWays(n - 1) + countWays(n - 2) + countWays(n - 3);
+    }
+
+    public static void main(String[] args) {
+        int steps = 4;
+        System.out.println("Number of ways to climb " + steps + " steps: " + countWays(steps));
+    }
+}
